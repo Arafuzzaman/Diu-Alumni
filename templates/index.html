@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="" class="logo d-flex align-items-center">
+        <img src="{% static './assets/img/Alumni.png' %}">
+{#        <h1>DIU</h1>#}
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="" >Home</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="#" >Top Alumni</a></li>
+{#            class="active"#}
+          <li><a href="">Alumni Sheet</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+
+          <!------ Nav Item - User
+          information ------>
+{#                    <li class="nav-item dropdown no-arrow">#}
+{#                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user}}</span>#}
+{#                            <img class="img-profile rounded-circle" style="height: 30px; width: 30px" src="{%  static 'img_1.png' %}" alt="Profile Pic">#}
+{#                        </a>#}
+{##}
+{#                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">#}
+{#                            <a class="dropdown-item" href="#">#}
+{#                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>#}
+{#                                Profile#}
+{#                            </a>#}
+{#                            <a class="dropdown-item" href="#">#}
+{#                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>#}
+{#                                Settings#}
+{#                            </a>#}
+{#                            <a class="dropdown-item" href="#">#}
+{#                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>#}
+{#                                Activity Log#}
+{#                            </a>#}
+{#                            <div class="dropdown-divider"></div>#}
+{#                            <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">#}
+{#                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>#}
+{#                                Logout#}
+{#                            </a>#}
+{#                        </div>#}
+{#                   </li>#}
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">DIU Alumni System</h2>
+            <p data-aos="fade-up">"It is literally true that you can succeed best and quickest by helping others to succeed." – Napolean Hill</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="{% url 'login_view' %}" class="btn-get-started">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/hero.jpg' %});"></div>
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/2.jpg' %});"></div>
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/3.jpg' %});"></div>
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/4.jpg' %});"></div>
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/5.jpg' %});"></div>
+        <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/6.jpg' %});"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="get-started section-bg">
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+            <div class="content">
+              <h3>Alumni Story</h3>
+              <p>DIU Alumni Community is honored as the Heart of Daffodil International University by the declartion of DIU Authority. Now the alumni are successfully leading their career in local and international market from a colossal number of distingushed careers like entrepreneurship, internatinalization, corporate personnel, ICT, Multimedia Technology, Education & Banking Sectors and etc.
+              <p>Daffodil Internatonal University.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade">
+            <form action="forms/quote.php" method="post" class="php-email-form">
+              <h3>Get a quote</h3>
+{#              <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.</p>#}
+              <div class="row gy-3">
+
+                <div class="col-md-12">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required>
+                </div>
+
+                <div class="col-md-12 ">
+                  <input type="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
+
+                  <button type="submit">Get a quote</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Quote Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Get Started Section -->
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+
+{% endblock content %}
